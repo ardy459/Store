@@ -103,34 +103,3 @@ transform: translateX(-50%);
 z-index: 999;
 }
 
-/* --- DATA EYE (SHOW/HIDE PASSWORD) --- */
-/* 4. Mengganti Teks "Show/Hide" menjadi "Tampilkan/Sembunyikan" */
-[data-eye] + .input-group-text {
-    font-size: 0; /* Hilangkan teks asli "Show" */
-    background-color: #151515;
-    border: 2px solid #444;
-    border-left: none;
-    color: #888;
-    cursor: pointer;
-    border-radius: 0 10px 10px 0;
-}
-
-/* Teks Baru "Tampilkan" */
-[data-eye] + .input-group-text::after {
-    content: "Tampilkan";
-    font-size: 13px;
-    font-weight: 600;
-    color: #888;
-}
-
-/* Teks Baru "Sembunyikan" (saat password terlihat) */
-[data-eye][type="text"] + .input-group-text::after {
-    content: "Sembunyikan";
-    color: #0071f8; /* Warna biru saat aktif */
-}
-
-/* Hover effect pada tombol mata */
-[data-eye] + .input-group-text:hover {
-    background-color: #222;
-    color: #fff;
-}
