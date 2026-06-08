@@ -3,7 +3,10 @@ html,body {
 }
 
 body.my-login-page {
-	background-color: #1e1e1e;
+	background-image: url('../assets/images/login-back.jpg'); 
+    background-size: cover;
+    background-position: center;
+	
 	font-size: 14px;
 }
 
