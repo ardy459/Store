@@ -102,3 +102,48 @@ left: 50%;
 transform: translateX(-50%);
 z-index: 999;
 }
+/* 1. Mengganti teks Show menjadi Tampilkan */
+[data-eye] + .input-group-text {
+    font-size: 0; /* Sembunyikan teks asli (Show/Hide) */
+    position: relative;
+}
+
+/* Tampilkan teks baru "Tampilkan" */
+[data-eye] + .input-group-text::after {
+    content: "Tampilkan";
+    font-size: 14px; /* Kembalikan ukuran font agar terbaca */
+    color: #6c757d;
+}
+
+/* Saat password lagi ditampilkan, ganti jadi "Sembunyikan" */
+[data-eye][type="text"] + .input-group-text::after {
+    content: "Sembunyikan";
+}
+/* 2. Mengubah warna outline hijau jadi merah (atau warna lain) */
+.form-control.is-valid, 
+.form-control.is-invalid {
+    background-image: none; /* Hapus icon centang/silang default Bootstrap */
+    border-color: #dc3545 !important; /* Paksa warna border menjadi Merah */
+}
+
+/* Jika ingin warnanya bukan merah, tapi warna template (Biru/Lugx): */
+/* Ganti #dc3545 dengan warna pilihan Anda, misal #0071f8 (Biru Template) */
+/* 3. Mengubah Warna Background */
+.my-login-page {
+    /* Contoh: Ubah jadi Abu-abu Gelap */
+    background-color: #1e1e1e; 
+}
+
+/* Atau jika ingin menggunakan Gambar Background (Sesuai LKPD Iframe Video/Maps): */
+.my-login-page {
+    /* Ganti URL dengan gambar background Anda */
+    background-image: url('../images/background-login.jpg'); 
+    background-size: cover;
+    background-position: center;
+}
+
+/* Mengubah warna kartu (kotak putih tengah) */
+.card {
+    background-color: #2a2a2a !important; /* Misal jadi Abu gelap */
+    color: #fff; /* Ubah warna teks jadi putih agar kontras */
+}
